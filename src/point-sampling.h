@@ -1,23 +1,38 @@
 #ifndef POINT_SAMPLING_H
 #define POINT_SAMPLING_H
 
-// Top-level class for rbt-samplings.
 #include "robintrace.h"
+#include "Vec2.h"
+#include <vector>
+#include <string>
 
+/** @brief Top-level class for rbt-samplings. */
 class point-sampling {
   public:
-  /** @brief Convert to rays. */
-  
-  /** @brief Get a triangulation. */
+    /** @brief Fill the sampling with points according to the input parameters.
+     * 
+     * This function is virtual and depends on which specialization is used. */
+    virtual void fill () = 0;
 
-  /** @brief Fill the sampling with points according to the input parameters. */
-  // TODO: this function is virtual and depends on the specialization.
-  
-  private:
-  // TODO: member: vector of Vec2 points.
+    /** @brief Convert to a ray bundle with a given direction. */
+    bun to_ray_bundle (const Vec3 &direction) const;
     
-  /** @brief Printer. */
-  // TODO: This prints the point coordinates. Implement the printer in Vec2 type.
+    /** @brief Get a triangulation. */
+
+    /** @brief Scale the sampling. */
+    void scale (double factor);
+    
+  private:
+    /** @brief Vector of 2D points storing the sampling. */
+    std::vector<Vec2> points;
+
+    /** @brief Specialization-dependent string indicating the point-sampling
+     * type. */
+    virtual std::string print_type () const = 0;
+      
+    /** @brief Printer. */
+    friend std::ostream& operator<< (std::ostream &out,
+                                     const point-sampling &ps);
 };
 
 #endif // POINT_SAMPLING_H
