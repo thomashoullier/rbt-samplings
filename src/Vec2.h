@@ -3,6 +3,7 @@
 #define VEC2_H
 
 #include <Eigen/Dense>
+#include "robintrace.h"
 #include <iostream>
 
 /** A 2D vector. */

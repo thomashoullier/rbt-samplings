@@ -7,7 +7,7 @@
 #include <string>
 
 /** @brief Top-level class for rbt-samplings. */
-class point-sampling {
+class point_sampling {
   public:
     /** @brief Fill the sampling with points according to the input parameters.
      * 
@@ -32,7 +32,7 @@ class point-sampling {
       
     /** @brief Printer. */
     friend std::ostream& operator<< (std::ostream &out,
-                                     const point-sampling &ps);
+                                     const point_sampling &ps);
 };
 
 #endif // POINT_SAMPLING_H
