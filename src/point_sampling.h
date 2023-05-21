@@ -2,7 +2,7 @@
 #define POINT_SAMPLING_H
 
 #include "robintrace.h"
-#include "Vec2.h"
+#include "Vec2/Vec2.h"
 #include <vector>
 #include <string>
 
