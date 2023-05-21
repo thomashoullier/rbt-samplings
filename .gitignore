@@ -43,4 +43,4 @@
 *.app
 bin/
 build/
-
+docs/html/
