@@ -44,3 +44,9 @@ target_link_libraries(rbt-samplings-example PRIVATE rbt-samplings)
 set_target_properties(rbt-samplings-example PROPERTIES COMPILE_FLAGS
                       "${CMAKE_CXX_FLAGS} -g -Wall -O2 -Wextra -march=native")
 endif()
+
+## Tests
+option(rbt-samplings-test "Build rbt-samplings-test" OFF)
+if (rbt-samplings-test)
+include("./test/CMakeLists.txt")
+endif()
