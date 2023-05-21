@@ -1,6 +1,8 @@
 #include "point_sampling.h"
 
-/** The z component of the ray position is set to zero. */
+/** The z component of the ray position is set to zero.
+ *  The rays in the bundle are in the same order as the points in the sampling.
+ *  */
 bun point_sampling::to_ray_bundle (const Vec3 &direction) const {
   bun ray_bundle;
   for (const auto &point : points) {
