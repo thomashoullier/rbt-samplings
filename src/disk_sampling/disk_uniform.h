@@ -1,3 +1,4 @@
+/** @file */
 #ifndef DISK_UNIFORM_H
 #define DISK_UNIFORM_H
 
@@ -6,7 +7,7 @@
 
 /** @brief Point sampling of the unit disk following a uniform repartition.
  *
- * It is generated thanks to a unit square grid mapped onto the unit disk
+ * It is generated thanks to a grid_square mapped onto the unit disk
  * by disk_sampling::fill_from_square_map. */
 class disk_uniform : public disk_sampling {
   public:
@@ -15,6 +16,7 @@ class disk_uniform : public disk_sampling {
     /** @brief Initialization constructor. */
     disk_uniform (unsigned int n);
     virtual void fill () override;
+    /** @brief Set parameter \p n. */
     void set_n (unsigned int n);
 
   private:

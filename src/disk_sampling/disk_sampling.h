@@ -1,3 +1,4 @@
+/** @file */
 #ifndef DISK_SAMPLING_H
 #define DISK_SAMPLING_H
 
@@ -11,11 +12,6 @@ class disk_sampling : public point_sampling {
   public:
     /** @brief Fill the sampling by mapping it from a square sampling. */
     void fill_from_square_map (const square_sampling &ss);
-    
-    virtual void fill () = 0;
-    
-  private:
-    virtual std::string print_type () const = 0;
 };
 
 #endif // DISK_SAMPLING_H

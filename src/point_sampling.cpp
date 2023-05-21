@@ -1,6 +1,8 @@
 #include "point_sampling.h"
 
-/** The z component of the ray position is set to zero.
+/** @param direction The direction vector of the rays in the bundle.
+ *
+ *  The z component of the ray position is set to zero.
  *  The rays in the bundle are in the same order as the points in the sampling.
  *  */
 bun point_sampling::to_ray_bundle (const Vec3 &direction) const {
@@ -13,13 +15,16 @@ bun point_sampling::to_ray_bundle (const Vec3 &direction) const {
   return ray_bundle;
 }
 
-/** This is an homothety around point (0, 0) by the given \p factor. */
+/** @param factor The scaling factor.
+ *
+ * This is an homothety around point (0, 0) by the given \p factor. */
 void point_sampling::scale (double factor) {
   for (auto &point : points) {
     point = point * factor;
   }
 }
 
+/** The coordinates of the points in the sampling are printed. */
 std::ostream& operator<< (std::ostream &out,
                           const point_sampling &ps) {
   out << "<point-sampling of type '" << ps.print_type() << "'" << std::endl;

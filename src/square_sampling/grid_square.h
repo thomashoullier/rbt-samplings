@@ -1,3 +1,4 @@
+/** @file */
 #ifndef GRID_SQUARE_H
 #define GRID_SQUARE_H
 
@@ -12,6 +13,7 @@ class grid_square : public square_sampling {
     /** @brief Initialization constructor. */
     grid_square (unsigned int n);
 
+    /** @brief Generate the n x n grid of points. */
     virtual void fill () override;
 
     /** @brief Set the number of points \p n on the side of the square. */

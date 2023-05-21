@@ -6,7 +6,7 @@
 #include "robintrace.h"
 #include <iostream>
 
-/** A 2D vector. */
+/** @brief A 2D vector. */
 typedef Eigen::Vector2d Vec2;
 
 /** @brief Vec2 to Vec3 conversion */

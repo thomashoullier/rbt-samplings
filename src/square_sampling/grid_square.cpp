@@ -4,6 +4,7 @@ grid_square::grid_square () {
   set_n(0);
 }
 
+/** @param n The number of points on the side of the square grid. */
 grid_square::grid_square (unsigned int n) {
   set_n(n);
   fill();
