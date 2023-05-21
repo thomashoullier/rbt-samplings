@@ -5,7 +5,6 @@
 
 /** @brief Point sampling of the unit square according to a regular cartesian
  *  grid with \p n points on its side. */
-
 class grid_square : public square_sampling {
   public:
     /** @brief Default constructor. */
