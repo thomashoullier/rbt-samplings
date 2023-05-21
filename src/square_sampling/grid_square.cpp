@@ -12,9 +12,9 @@ grid_square::grid_square (unsigned int n) {
 void grid_square::fill () {
   points.clear();
   double step = 2.0 / (n - 1);
-  for (int ix = 0 ; ix < n ; ix++) {
+  for (unsigned int ix = 0 ; ix < n ; ix++) {
     double x = -1.0 + ix * step;
-    for (int iy = 0 ; iy < n ; iy++) {
+    for (unsigned int iy = 0 ; iy < n ; iy++) {
       double y = -1.0 + iy * step;
       points.push_back(Vec2(x, y));
     }
