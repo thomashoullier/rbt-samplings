@@ -3,4 +3,6 @@
 
 #include "point_sampling.h"
 
+#include "square_sampling/grid_square.h"
+
 #endif // RBT_SAMPLINGS_H

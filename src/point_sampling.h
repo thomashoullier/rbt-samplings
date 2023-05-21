@@ -9,6 +9,9 @@
 /** @brief Top-level class for rbt-samplings. */
 class point_sampling {
   public:
+    /** @brief Vector of 2D points storing the sampling. */
+    std::vector<Vec2> points;
+
     /** @brief Fill the sampling with points according to the input parameters.
      * 
      * This function is virtual and depends on which specialization is used. */
@@ -19,13 +22,12 @@ class point_sampling {
     
     /** @brief Get a triangulation. */
 
+    /** @brief Plot the points. */
+
     /** @brief Scale the sampling. */
     void scale (double factor);
     
   private:
-    /** @brief Vector of 2D points storing the sampling. */
-    std::vector<Vec2> points;
-
     /** @brief Specialization-dependent string indicating the point-sampling
      * type. */
     virtual std::string print_type () const = 0;

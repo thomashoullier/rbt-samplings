@@ -11,18 +11,18 @@ class grid_square : public square_sampling {
     /** @brief Default constructor. */
     grid_square ();
     /** @brief Initialization constructor. */
-    grid_square (int _n);
+    grid_square (unsigned int n);
 
     virtual void fill () override;
 
     /** @brief Set the number of points \p n on the side of the square. */
-    void set_n (int _n);
+    void set_n (unsigned int n);
   
   private:
     /** @brief The number of points on the side of the square grid.
      * 
      * The total number of points in the sampling is then n x n. */
-    int n;
+    unsigned int n;
 
     virtual std::string print_type () const override;
 };
