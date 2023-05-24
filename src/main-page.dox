@@ -1,0 +1,24 @@
+/** @mainpage RobinTrace: samplings documentation
+* rbt_samplings is a utility library for RobinTrace. It implements point
+* samplings in 2D.
+*
+* \section scope Scope
+* The point samplings are defined for:
+* - Various apertures: disk, square, etc.
+* - Various distributions: grid, disk-uniform, etc.
+* - With a parameterizable number of points.
+*
+* We define printers and plotters for these points, as well as interface
+* utilities with the rest of RobinTrace.
+* 
+* The point samplings are typically used to define aperture stop sampling
+* schemes with rays. We also use these samplings in the renderer for
+* RobinTrace.
+*
+* \section example Example
+* The following is an example file showing some of the features in
+* rbt_samplings.
+* \include example.cpp
+* The following image is produced:
+* \image html disk_uniform_3.png
+*/
