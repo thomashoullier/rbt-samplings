@@ -5,7 +5,16 @@
 #include "robintrace.h"
 #include "Vec2/Vec2.h"
 #include <vector>
+#include <array>
 #include <string>
+
+// libqhull for triangulation.
+#include <libqhullcpp/Qhull.h>
+#include <libqhullcpp/QhullPoint.h>
+#include <libqhullcpp/QhullFacetList.h>
+#include <libqhullcpp/QhullVertexSet.h>
+#include <libqhullcpp/RboxPoints.h>
+using namespace orgQhull;
 
 /** @brief Top-level class for rbt-samplings. All point samplings are of this
  * type. It implements general methods over point samplings. */
@@ -23,7 +32,8 @@ class point_sampling {
     /** @brief Convert to a ray bundle with a given direction. */
     bun to_ray_bundle (const Vec3 &direction) const;
     
-    // TODO: Triangulate
+    /** @brief Triangulate the points into a mesh structure over points. */
+    std::vector<std::array<int, 3>> triangulate() const;
     // TODO: Plot
 
     /** @brief Scale the sampling. */

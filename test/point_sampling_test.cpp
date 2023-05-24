@@ -26,4 +26,10 @@ TEST_CASE("point_sampling methods", "[point_sampling]") {
     REQUIRE(first_ray.v(1) == direction(1));
     REQUIRE(first_ray.v(2) == direction(2));
   }
+
+  SECTION("Triangulate the points set") {
+    disk_uniform du(3);
+    auto triangulation = du.triangulate();
+    SUCCEED("triangulate called.");
+  }
 }
