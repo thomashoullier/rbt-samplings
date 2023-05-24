@@ -17,7 +17,7 @@ bun point_sampling::to_ray_bundle (const Vec3 &direction) const {
 
 /** We use the Qhull library to create a Delaunay triangulation of the points.
  * */
-std::vector<std::array<int, 3>> point_sampling::triangulate() const {
+triangulation point_sampling::triangulate() const {
   // See the libqhull documentation:
   // https://docs.ros.org/en/fuerte/api/libqhull/html/index.html
   // Convert the points to the Qhull format.
@@ -31,11 +31,11 @@ std::vector<std::array<int, 3>> point_sampling::triangulate() const {
   Qhull qhull;
   qhull.runQhull(qcoords, "d Qt"); // 'Qt' forces facets to be triangles.
   // Extract the facets
-  std::vector<std::array<int, 3>> tri_facets;
+  triangulation tri_facets;
   std::vector<QhullFacet> facets = qhull.facetList().toStdVector();
   for (const auto &facet : facets) {
     QhullVertexSet facet_vertices = facet.vertices();
-    std::array<int, 3> point_list = {facet_vertices.at(0).point().id(),
+    triangle_data point_list = {facet_vertices.at(0).point().id(),
                                      facet_vertices.at(1).point().id(),
                                      facet_vertices.at(2).point().id()};
     tri_facets.push_back(point_list);

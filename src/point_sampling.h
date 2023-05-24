@@ -4,6 +4,7 @@
 
 #include "robintrace.h"
 #include "Vec2/Vec2.h"
+#include "triangle_data/triangle_data.h"
 #include <vector>
 #include <array>
 #include <string>
@@ -33,7 +34,7 @@ class point_sampling {
     bun to_ray_bundle (const Vec3 &direction) const;
     
     /** @brief Triangulate the points into a mesh structure over points. */
-    std::vector<std::array<int, 3>> triangulate() const;
+    triangulation triangulate() const;
     // TODO: Plot
 
     /** @brief Scale the sampling. */

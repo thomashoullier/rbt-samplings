@@ -24,7 +24,6 @@ FetchContent_Declare(
     GIT_SHALLOW TRUE
     GIT_PROGRESS TRUE)
 FetchContent_MakeAvailable(qhull)
-## TODO: is this line required?
 include_directories(${qhull_SOURCE_DIR}/src/)
 
 # Create the rbt-samplings library
@@ -33,7 +32,6 @@ file(GLOB_RECURSE RBT_SAMPLINGS_SOURCES "${RBT_SAMPLINGS_DIR}/src/*.cpp")
 add_library(rbt-samplings STATIC ${RBT_SAMPLINGS_SOURCES})
 target_include_directories(rbt-samplings PUBLIC
                            "$<BUILD_INTERFACE:${RBT_SAMPLINGS_DIR}/src>")
-## TODO: is qhullcpp required?
 target_link_libraries(rbt-samplings PUBLIC robintrace qhullcpp qhullstatic_r)
 
 # Targets
