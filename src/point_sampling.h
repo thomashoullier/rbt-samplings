@@ -17,6 +17,9 @@
 #include <libqhullcpp/RboxPoints.h>
 using namespace orgQhull;
 
+// matplotplusplus for plotting.
+#include <matplot/matplot.h>
+
 /** @brief Top-level class for rbt-samplings. All point samplings are of this
  * type. It implements general methods over point samplings. */
 class point_sampling {
@@ -35,7 +38,9 @@ class point_sampling {
     
     /** @brief Triangulate the points into a mesh structure over points. */
     triangulation triangulate() const;
-    // TODO: Plot
+    
+    /** @brief Plot the points in a window. */
+    void plot() const;
 
     /** @brief Scale the sampling. */
     void scale (double factor);

@@ -25,6 +25,14 @@ FetchContent_Declare(
     GIT_PROGRESS TRUE)
 FetchContent_MakeAvailable(qhull)
 include_directories(${qhull_SOURCE_DIR}/src/)
+## matplotplusplus
+FetchContent_Declare(
+    matplotplusplus
+    GIT_REPOSITORY https://github.com/alandefreitas/matplotplusplus
+    GIT_TAG master
+    GIT_SHALLOW TRUE
+    GIT_PROGRESS TRUE)
+FetchContent_MakeAvailable(matplotplusplus)
 
 # Create the rbt-samplings library
 set(RBT_SAMPLINGS_DIR "${CMAKE_CURRENT_LIST_DIR}")
@@ -32,7 +40,10 @@ file(GLOB_RECURSE RBT_SAMPLINGS_SOURCES "${RBT_SAMPLINGS_DIR}/src/*.cpp")
 add_library(rbt-samplings STATIC ${RBT_SAMPLINGS_SOURCES})
 target_include_directories(rbt-samplings PUBLIC
                            "$<BUILD_INTERFACE:${RBT_SAMPLINGS_DIR}/src>")
-target_link_libraries(rbt-samplings PUBLIC robintrace qhullcpp qhullstatic_r)
+target_link_libraries(rbt-samplings PUBLIC
+                      robintrace
+                      qhullcpp qhullstatic_r
+                      matplot)
 
 # Targets
 ## Example

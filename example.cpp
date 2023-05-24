@@ -20,4 +20,7 @@ int main () {
   std::cout << "## Triangulate the sampling" << std::endl;
   triangulation du_tri = du.triangulate();
   std::cout << du_tri << std::endl;
+
+  std::cout << "## Plot the sampling" << std::endl;
+  du.plot();
 }

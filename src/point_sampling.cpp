@@ -43,6 +43,20 @@ triangulation point_sampling::triangulate() const {
   return tri_facets;
 }
 
+void point_sampling::plot () const {
+  std::vector<double> x, y;
+  for (const auto &point : points) {
+    x.push_back(point(0));
+    y.push_back(point(1));
+  }
+
+  matplot::scatter(x, y);
+  matplot::grid(matplot::on);
+  matplot::axis(matplot::equal);
+
+  matplot::show();
+}
+
 /** @param factor The scaling factor.
  *
  * This is an homothety around point (0, 0) by the given \p factor. */
