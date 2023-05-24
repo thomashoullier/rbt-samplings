@@ -32,6 +32,7 @@ The targets are the following:
 We use the following libraries:
 * [RobinTrace](https://github.com/thomashoullier/robintrace)
 * [qhull](https://github.com/qhull/qhull)
+* [matplotplusplus](https://github.com/alandefreitas/matplotplusplus)
 
 In addition, only for tests:
 * [Catch2](https://github.com/catchorg/Catch2)
