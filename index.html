@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RobinTrace: samplings: Main Page</title>
+<title>RobinTrace: samplings: RobinTrace: samplings documentation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,11 +67,60 @@ $(function() {
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">RobinTrace: samplings Documentation</div>  </div>
+<div class="title">RobinTrace: samplings documentation </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p>rbt_samplings is a utility library for RobinTrace. It implements point samplings in 2D.</p>
+<h1><a class="anchor" id="scope"></a>
+Scope</h1>
+<p>The point samplings are defined for:</p><ul>
+<li>Various apertures: disk, square, etc.</li>
+<li>Various distributions: grid, disk-uniform, etc.</li>
+<li>With a parameterizable number of points.</li>
+</ul>
+<p>We define printers and plotters for these points, as well as interface utilities with the rest of RobinTrace.</p>
+<p>The point samplings are typically used to define aperture stop sampling schemes with rays. We also use these samplings in the renderer for RobinTrace.</p>
+<h1><a class="anchor" id="example"></a>
+Example</h1>
+<p>The following is an example file showing some of the features in rbt_samplings. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="rbt__samplings_8h.html">rbt_samplings.h</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main () {</div>
+<div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;# rbt-samplings example #&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"> </div>
+<div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;## grid_square sampling&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">  <a class="code" href="classgrid__square.html">grid_square</a> gs(3);</div>
+<div class="line">  std::cout &lt;&lt; gs &lt;&lt; std::endl;</div>
+<div class="line"> </div>
+<div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;## disk_uniform sampling&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">  <a class="code" href="classdisk__uniform.html">disk_uniform</a> du(3);</div>
+<div class="line">  std::cout &lt;&lt; du &lt;&lt; std::endl;</div>
+<div class="line"> </div>
+<div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;## Convert to a ray bundle&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">  bun du_b = du.to_ray_bundle(Vec3(0, 0, 1));</div>
+<div class="line">  std::cout &lt;&lt; du_b &lt;&lt; std::endl;</div>
+<div class="line"> </div>
+<div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;## Triangulate the sampling&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">  <a class="code" href="triangle__data_8h.html#a2cd4a76bcfaae777c8b5821a9631cd26">triangulation</a> du_tri = du.triangulate();</div>
+<div class="line">  std::cout &lt;&lt; du_tri &lt;&lt; std::endl;</div>
+<div class="line"> </div>
+<div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;## Plot the sampling&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">  du.plot();</div>
+<div class="line"> </div>
+<div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;## Plot to a file&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">  du.plot_tofile(<span class="stringliteral">&quot;disk_uniform_3.png&quot;</span>);</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassdisk__uniform_html"><div class="ttname"><a href="classdisk__uniform.html">disk_uniform</a></div><div class="ttdoc">Point sampling of the unit disk following a uniform repartition.</div><div class="ttdef"><b>Definition:</b> disk_uniform.h:12</div></div>
+<div class="ttc" id="aclassgrid__square_html"><div class="ttname"><a href="classgrid__square.html">grid_square</a></div><div class="ttdoc">Point sampling of the unit square according to a regular cartesian grid with n points on its side.</div><div class="ttdef"><b>Definition:</b> grid_square.h:9</div></div>
+<div class="ttc" id="arbt__samplings_8h_html"><div class="ttname"><a href="rbt__samplings_8h.html">rbt_samplings.h</a></div></div>
+<div class="ttc" id="atriangle__data_8h_html_a2cd4a76bcfaae777c8b5821a9631cd26"><div class="ttname"><a href="triangle__data_8h.html#a2cd4a76bcfaae777c8b5821a9631cd26">triangulation</a></div><div class="ttdeci">std::vector&lt; triangle_data &gt; triangulation</div><div class="ttdoc">Triangulation set.</div><div class="ttdef"><b>Definition:</b> triangle_data.h:16</div></div>
+</div><!-- fragment --><p> The following image is produced: </p><div class="image">
+<img src="disk_uniform_3.png" alt=""/>
+</div>
+ </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

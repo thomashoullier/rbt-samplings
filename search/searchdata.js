@@ -6,7 +6,8 @@ var indexSectionsWithContent =
   3: "dfgopstv",
   4: "np",
   5: "tv",
-  6: "o"
+  6: "o",
+  7: "r"
 };
 
 var indexSectionNames =
@@ -17,7 +18,8 @@ var indexSectionNames =
   3: "functions",
   4: "variables",
   5: "typedefs",
-  6: "related"
+  6: "related",
+  7: "pages"
 };
 
 var indexSectionLabels =
@@ -28,6 +30,7 @@ var indexSectionLabels =
   3: "Functions",
   4: "Variables",
   5: "Typedefs",
-  6: "Friends"
+  6: "Friends",
+  7: "Pages"
 };
 

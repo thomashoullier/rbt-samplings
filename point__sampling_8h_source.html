@@ -109,17 +109,19 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="triangle__data_8h.html#a2cd4a76bcfaae777c8b5821a9631cd26">triangulation</a> triangulate() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> plot() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> scale (<span class="keywordtype">double</span> factor);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classpoint__sampling.html#ab4fcb64e7ad7b625a90da15566575661">   51</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classpoint__sampling.html#ab4fcb64e7ad7b625a90da15566575661">print_type</a> () <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="triangle__data_8h.html#a5ff21d0b55650bf63375c237bdc74d39">operator&lt;&lt; </a>(std::ostream &amp;out,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                     <span class="keyword">const</span> <a class="code" href="classpoint__sampling.html">point_sampling</a> &amp;ps);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// POINT_SAMPLING_H</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> plot_tofile(std::string filename) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> scale (<span class="keywordtype">double</span> factor);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classpoint__sampling.html#ab4fcb64e7ad7b625a90da15566575661">   53</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classpoint__sampling.html#ab4fcb64e7ad7b625a90da15566575661">print_type</a> () <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> plot_init () <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="triangle__data_8h.html#a5ff21d0b55650bf63375c237bdc74d39">operator&lt;&lt; </a>(std::ostream &amp;out,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                     <span class="keyword">const</span> <a class="code" href="classpoint__sampling.html">point_sampling</a> &amp;ps);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// POINT_SAMPLING_H</span></div>
 <div class="ttc" id="aVec2_8h_html"><div class="ttname"><a href="Vec2_8h.html">Vec2.h</a></div></div>
 <div class="ttc" id="aclasspoint__sampling_html"><div class="ttname"><a href="classpoint__sampling.html">point_sampling</a></div><div class="ttdoc">Top-level class for rbt-samplings. All point samplings are of this type. It implements general method...</div><div class="ttdef"><b>Definition:</b> point_sampling.h:25</div></div>
 <div class="ttc" id="aclasspoint__sampling_html_a05e0e72af745369fb622353afd19b734"><div class="ttname"><a href="classpoint__sampling.html#a05e0e72af745369fb622353afd19b734">point_sampling::fill</a></div><div class="ttdeci">virtual void fill()=0</div><div class="ttdoc">Fill the sampling with points according to specific input parameters.</div></div>
