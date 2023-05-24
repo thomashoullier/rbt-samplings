@@ -2,10 +2,10 @@ var indexSectionsWithContent =
 {
   0: "dfgnoprstv",
   1: "dgps",
-  2: "dgprsv",
+  2: "dgprstv",
   3: "dfgopstv",
   4: "np",
-  5: "v",
+  5: "tv",
   6: "o"
 };
 
