@@ -43,18 +43,25 @@ triangulation point_sampling::triangulate() const {
   return tri_facets;
 }
 
-void point_sampling::plot () const {
+void point_sampling::plot_init () const {
   std::vector<double> x, y;
   for (const auto &point : points) {
     x.push_back(point(0));
     y.push_back(point(1));
   }
-
   matplot::scatter(x, y);
   matplot::grid(matplot::on);
   matplot::axis(matplot::equal);
+}
 
+void point_sampling::plot () const {
+  plot_init();
   matplot::show();
+}
+
+void point_sampling::plot_tofile(std::string filename) const {
+  plot_init();
+  matplot::save(filename);
 }
 
 /** @param factor The scaling factor.

@@ -41,6 +41,8 @@ class point_sampling {
     
     /** @brief Plot the points in a window. */
     void plot() const;
+    /** @brief Plot to a file */
+    void plot_tofile(std::string filename) const;
 
     /** @brief Scale the sampling. */
     void scale (double factor);
@@ -49,6 +51,8 @@ class point_sampling {
     /** @brief Specialization-dependent string indicating the point sampling
      * type. */
     virtual std::string print_type () const = 0;
+    /** @brief Internal initialization of the plot. */
+    void plot_init () const;
       
     /** @brief Printer. */
     friend std::ostream& operator<< (std::ostream &out,

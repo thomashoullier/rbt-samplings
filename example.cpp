@@ -23,4 +23,7 @@ int main () {
 
   std::cout << "## Plot the sampling" << std::endl;
   du.plot();
+
+  std::cout << "## Plot to a file" << std::endl;
+  du.plot_tofile("disk_uniform_3.png");
 }
