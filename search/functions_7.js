@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vec2_5fto_5fvec3_57',['Vec2_to_Vec3',['../Vec2_8h.html#a21117b5832017fde38193048da0a4258',1,'Vec2.cpp']]]
+  ['to_5fray_5fbundle_59',['to_ray_bundle',['../classpoint__sampling.html#a25916ab8b3861715bb58a355b41550fb',1,'point_sampling']]],
+  ['triangulate_60',['triangulate',['../classpoint__sampling.html#a37d9c048c9ec285f6f188b0a5e5a6863',1,'point_sampling']]]
 ];

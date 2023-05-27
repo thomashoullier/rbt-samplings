@@ -99,6 +99,14 @@ Example</h1>
 <div class="line">  <a class="code" href="classdisk__uniform.html">disk_uniform</a> du(3);</div>
 <div class="line">  std::cout &lt;&lt; du &lt;&lt; std::endl;</div>
 <div class="line"> </div>
+<div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;## Clone a point_sampling&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">  std::unique_ptr&lt;point_sampling&gt; du_clone = du.clone();</div>
+<div class="line">  std::cout &lt;&lt; *du_clone &lt;&lt; std::endl;</div>
+<div class="line"> </div>
+<div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;## Scale a point_sampling&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">  du_clone-&gt;scale(2);</div>
+<div class="line">  std::cout &lt;&lt; *du_clone &lt;&lt; std::endl;</div>
+<div class="line"> </div>
 <div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;## Convert to a ray bundle&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line">  bun du_b = du.to_ray_bundle(Vec3(0, 0, 1));</div>
 <div class="line">  std::cout &lt;&lt; du_b &lt;&lt; std::endl;</div>

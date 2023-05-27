@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['to_5fray_5fbundle_23',['to_ray_bundle',['../classpoint__sampling.html#a25916ab8b3861715bb58a355b41550fb',1,'point_sampling']]],
-  ['triangle_5fdata_24',['triangle_data',['../triangle__data_8h.html#a51d728fcce3eb2f533f3f3bcb80b7228',1,'triangle_data.h']]],
-  ['triangle_5fdata_2eh_25',['triangle_data.h',['../triangle__data_8h.html',1,'']]],
-  ['triangulate_26',['triangulate',['../classpoint__sampling.html#a37d9c048c9ec285f6f188b0a5e5a6863',1,'point_sampling']]],
-  ['triangulation_27',['triangulation',['../triangle__data_8h.html#a2cd4a76bcfaae777c8b5821a9631cd26',1,'triangle_data.h']]]
+  ['scale_21',['scale',['../classpoint__sampling.html#a2c83c9350c0067bec38b4326b6d2e2c5',1,'point_sampling']]],
+  ['set_5fn_22',['set_n',['../classdisk__uniform.html#ab235bcdffe9f9b32d3e96ae26f5a89d7',1,'disk_uniform::set_n()'],['../classgrid__square.html#aefb6f4ea57c76022a94f5472269ca939',1,'grid_square::set_n()']]],
+  ['square_5fsampling_23',['square_sampling',['../classsquare__sampling.html',1,'']]],
+  ['square_5fsampling_2eh_24',['square_sampling.h',['../square__sampling_8h.html',1,'']]]
 ];

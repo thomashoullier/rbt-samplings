@@ -85,47 +85,52 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="triangle__data_8h.html">triangle_data/triangle_data.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// libqhull for triangulation.</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;libqhullcpp/Qhull.h&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;libqhullcpp/QhullPoint.h&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;libqhullcpp/QhullFacetList.h&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;libqhullcpp/QhullVertexSet.h&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;libqhullcpp/RboxPoints.h&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using namespace </span>orgQhull;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// matplotplusplus for plotting.</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;matplot/matplot.h&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classpoint__sampling.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classpoint__sampling.html">point_sampling</a> {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classpoint__sampling.html#a616783593d3c8e67909082a51f0e10fe">   28</a></span>&#160;    std::vector&lt;Vec2&gt; <a class="code" href="classpoint__sampling.html#a616783593d3c8e67909082a51f0e10fe">points</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classpoint__sampling.html#a05e0e72af745369fb622353afd19b734">   34</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classpoint__sampling.html#a05e0e72af745369fb622353afd19b734">fill</a> () = 0;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    bun to_ray_bundle (<span class="keyword">const</span> Vec3 &amp;direction) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="triangle__data_8h.html#a2cd4a76bcfaae777c8b5821a9631cd26">triangulation</a> triangulate() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> plot() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> plot_tofile(std::string filename) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> scale (<span class="keywordtype">double</span> factor);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classpoint__sampling.html#ab4fcb64e7ad7b625a90da15566575661">   53</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classpoint__sampling.html#ab4fcb64e7ad7b625a90da15566575661">print_type</a> () <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> plot_init () <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="triangle__data_8h.html#a5ff21d0b55650bf63375c237bdc74d39">operator&lt;&lt; </a>(std::ostream &amp;out,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                     <span class="keyword">const</span> <a class="code" href="classpoint__sampling.html">point_sampling</a> &amp;ps);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// POINT_SAMPLING_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// libqhull for triangulation.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;libqhullcpp/Qhull.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;libqhullcpp/QhullPoint.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;libqhullcpp/QhullFacetList.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;libqhullcpp/QhullVertexSet.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;libqhullcpp/RboxPoints.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using namespace </span>orgQhull;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// matplotplusplus for plotting.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;matplot/matplot.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classpoint__sampling.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classpoint__sampling.html">point_sampling</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classpoint__sampling.html#a616783593d3c8e67909082a51f0e10fe">   29</a></span>&#160;    std::vector&lt;Vec2&gt; <a class="code" href="classpoint__sampling.html#a616783593d3c8e67909082a51f0e10fe">points</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::unique_ptr&lt;point_sampling&gt; clone () <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classpoint__sampling.html#a05e0e72af745369fb622353afd19b734">   38</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classpoint__sampling.html#a05e0e72af745369fb622353afd19b734">fill</a> () = 0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    bun to_ray_bundle (<span class="keyword">const</span> Vec3 &amp;direction) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="triangle__data_8h.html#a2cd4a76bcfaae777c8b5821a9631cd26">triangulation</a> triangulate() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> plot() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> plot_tofile(std::string filename) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> scale (<span class="keywordtype">double</span> factor);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classpoint__sampling.html#a9521c31367729432bf56d2408068c04c">   56</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classpoint__sampling.html">point_sampling</a>* <a class="code" href="classpoint__sampling.html#a9521c31367729432bf56d2408068c04c">clone_impl</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classpoint__sampling.html#ab4fcb64e7ad7b625a90da15566575661">   59</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classpoint__sampling.html#ab4fcb64e7ad7b625a90da15566575661">print_type</a> () <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> plot_init () <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="triangle__data_8h.html#a5ff21d0b55650bf63375c237bdc74d39">operator&lt;&lt; </a>(std::ostream &amp;out,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                     <span class="keyword">const</span> <a class="code" href="classpoint__sampling.html">point_sampling</a> &amp;ps);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// POINT_SAMPLING_H</span></div>
 <div class="ttc" id="aVec2_8h_html"><div class="ttname"><a href="Vec2_8h.html">Vec2.h</a></div></div>
-<div class="ttc" id="aclasspoint__sampling_html"><div class="ttname"><a href="classpoint__sampling.html">point_sampling</a></div><div class="ttdoc">Top-level class for rbt-samplings. All point samplings are of this type. It implements general method...</div><div class="ttdef"><b>Definition:</b> point_sampling.h:25</div></div>
+<div class="ttc" id="aclasspoint__sampling_html"><div class="ttname"><a href="classpoint__sampling.html">point_sampling</a></div><div class="ttdoc">Top-level class for rbt-samplings. All point samplings are of this type. It implements general method...</div><div class="ttdef"><b>Definition:</b> point_sampling.h:26</div></div>
 <div class="ttc" id="aclasspoint__sampling_html_a05e0e72af745369fb622353afd19b734"><div class="ttname"><a href="classpoint__sampling.html#a05e0e72af745369fb622353afd19b734">point_sampling::fill</a></div><div class="ttdeci">virtual void fill()=0</div><div class="ttdoc">Fill the sampling with points according to specific input parameters.</div></div>
-<div class="ttc" id="aclasspoint__sampling_html_a616783593d3c8e67909082a51f0e10fe"><div class="ttname"><a href="classpoint__sampling.html#a616783593d3c8e67909082a51f0e10fe">point_sampling::points</a></div><div class="ttdeci">std::vector&lt; Vec2 &gt; points</div><div class="ttdoc">Vector of 2D points storing the sampling.</div><div class="ttdef"><b>Definition:</b> point_sampling.h:28</div></div>
+<div class="ttc" id="aclasspoint__sampling_html_a616783593d3c8e67909082a51f0e10fe"><div class="ttname"><a href="classpoint__sampling.html#a616783593d3c8e67909082a51f0e10fe">point_sampling::points</a></div><div class="ttdeci">std::vector&lt; Vec2 &gt; points</div><div class="ttdoc">Vector of 2D points storing the sampling.</div><div class="ttdef"><b>Definition:</b> point_sampling.h:29</div></div>
+<div class="ttc" id="aclasspoint__sampling_html_a9521c31367729432bf56d2408068c04c"><div class="ttname"><a href="classpoint__sampling.html#a9521c31367729432bf56d2408068c04c">point_sampling::clone_impl</a></div><div class="ttdeci">virtual point_sampling * clone_impl() const =0</div><div class="ttdoc">Clone implementation in derived classes.</div></div>
 <div class="ttc" id="aclasspoint__sampling_html_ab4fcb64e7ad7b625a90da15566575661"><div class="ttname"><a href="classpoint__sampling.html#ab4fcb64e7ad7b625a90da15566575661">point_sampling::print_type</a></div><div class="ttdeci">virtual std::string print_type() const =0</div><div class="ttdoc">Specialization-dependent string indicating the point sampling type.</div></div>
 <div class="ttc" id="atriangle__data_8h_html"><div class="ttname"><a href="triangle__data_8h.html">triangle_data.h</a></div></div>
 <div class="ttc" id="atriangle__data_8h_html_a2cd4a76bcfaae777c8b5821a9631cd26"><div class="ttname"><a href="triangle__data_8h.html#a2cd4a76bcfaae777c8b5821a9631cd26">triangulation</a></div><div class="ttdeci">std::vector&lt; triangle_data &gt; triangulation</div><div class="ttdoc">Triangulation set.</div><div class="ttdef"><b>Definition:</b> triangle_data.h:16</div></div>

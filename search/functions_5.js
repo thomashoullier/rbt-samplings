@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['scale_53',['scale',['../classpoint__sampling.html#a2c83c9350c0067bec38b4326b6d2e2c5',1,'point_sampling']]],
-  ['set_5fn_54',['set_n',['../classdisk__uniform.html#ab235bcdffe9f9b32d3e96ae26f5a89d7',1,'disk_uniform::set_n()'],['../classgrid__square.html#aefb6f4ea57c76022a94f5472269ca939',1,'grid_square::set_n()']]]
+  ['plot_53',['plot',['../classpoint__sampling.html#a76206753ba3eb3efb86c4f01444df05e',1,'point_sampling']]],
+  ['plot_5finit_54',['plot_init',['../classpoint__sampling.html#adfdd9beac439b07d1a39e2aeeef00a74',1,'point_sampling']]],
+  ['plot_5ftofile_55',['plot_tofile',['../classpoint__sampling.html#ad69dd88507b2677de7b123b58bd86b31',1,'point_sampling']]],
+  ['print_5ftype_56',['print_type',['../classdisk__uniform.html#af3ae3943c6e9a76d155476104a0fac4e',1,'disk_uniform::print_type()'],['../classpoint__sampling.html#ab4fcb64e7ad7b625a90da15566575661',1,'point_sampling::print_type()'],['../classgrid__square.html#a814404f3c4728a043e24eaaaa4598528',1,'grid_square::print_type()']]]
 ];

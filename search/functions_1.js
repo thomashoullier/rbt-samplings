@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['fill_45',['fill',['../classdisk__uniform.html#ab07d3ce6389392112ac1eae371383d9d',1,'disk_uniform::fill()'],['../classpoint__sampling.html#a05e0e72af745369fb622353afd19b734',1,'point_sampling::fill()'],['../classgrid__square.html#a3cea1e6225fa38d3959a1b963e164681',1,'grid_square::fill()']]],
-  ['fill_5ffrom_5fsquare_5fmap_46',['fill_from_square_map',['../classdisk__sampling.html#a320f3d045ad275cbef4fba377ef6f98d',1,'disk_sampling']]]
+  ['disk_5funiform_48',['disk_uniform',['../classdisk__uniform.html#a04f9677c3c6adf23fc04565ede4d9623',1,'disk_uniform::disk_uniform()'],['../classdisk__uniform.html#a494acbb3381cbfe7e950217ba300b9e4',1,'disk_uniform::disk_uniform(unsigned int n)']]]
 ];

@@ -1,9 +1,9 @@
 var indexSectionsWithContent =
 {
-  0: "dfgnoprstv",
+  0: "cdfgnoprstv",
   1: "dgps",
   2: "dgprstv",
-  3: "dfgopstv",
+  3: "cdfgopstv",
   4: "np",
   5: "tv",
   6: "o",
