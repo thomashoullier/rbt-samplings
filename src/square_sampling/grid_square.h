@@ -20,6 +20,7 @@ class grid_square : public square_sampling {
     void set_n (unsigned int n);
   
   private:
+    virtual grid_square* clone_impl() const override;
     /** @brief The number of points on the side of the square grid.
      * 
      * The total number of points in the sampling is then n x n. */

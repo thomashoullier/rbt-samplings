@@ -32,4 +32,10 @@ TEST_CASE("point_sampling methods", "[point_sampling]") {
     auto triangulation = du.triangulate();
     SUCCEED("triangulate called.");
   }
+
+  SECTION("Clone point_sampling") {
+    disk_uniform du(3);
+    auto du_clone = du.clone();
+    SUCCEED("clone called.");
+  }
 }

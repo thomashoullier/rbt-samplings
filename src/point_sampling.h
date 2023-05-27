@@ -7,6 +7,7 @@
 #include "triangle_data/triangle_data.h"
 #include <vector>
 #include <array>
+#include <memory>
 #include <string>
 
 // libqhull for triangulation.
@@ -26,6 +27,9 @@ class point_sampling {
   public:
     /** @brief Vector of 2D points storing the sampling. */
     std::vector<Vec2> points;
+
+    /** @brief Clone the point_sampling */
+    std::unique_ptr<point_sampling> clone () const;
 
     /** @brief Fill the sampling with points according to specific input
      * parameters.
@@ -48,6 +52,8 @@ class point_sampling {
     void scale (double factor);
     
   private:
+    /** @brief Clone implementation in derived classes */
+    virtual point_sampling* clone_impl() const = 0;
     /** @brief Specialization-dependent string indicating the point sampling
      * type. */
     virtual std::string print_type () const = 0;

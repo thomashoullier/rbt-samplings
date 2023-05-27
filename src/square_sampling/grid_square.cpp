@@ -10,6 +10,10 @@ grid_square::grid_square (unsigned int n) {
   fill();
 }
 
+grid_square* grid_square::clone_impl() const {
+  return new grid_square(*this);
+}
+
 void grid_square::fill () {
   points.clear();
   double step = 2.0 / (n - 1);

@@ -13,6 +13,14 @@ int main () {
   disk_uniform du(3);
   std::cout << du << std::endl;
 
+  std::cout << "## Clone a point_sampling" << std::endl;
+  std::unique_ptr<point_sampling> du_clone = du.clone();
+  std::cout << *du_clone << std::endl;
+
+  std::cout << "## Scale a point_sampling" << std::endl;
+  du_clone->scale(2);
+  std::cout << *du_clone << std::endl;
+
   std::cout << "## Convert to a ray bundle" << std::endl;
   bun du_b = du.to_ray_bundle(Vec3(0, 0, 1));
   std::cout << du_b << std::endl;

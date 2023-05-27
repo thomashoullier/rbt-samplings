@@ -20,6 +20,7 @@ class disk_uniform : public disk_sampling {
     void set_n (unsigned int n);
 
   private:
+    virtual disk_uniform* clone_impl() const override;
     /** @brief The number of points on the side of the generating square grid.
      *
      * The total number of points in the sampling is n x n. */

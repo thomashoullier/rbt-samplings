@@ -1,5 +1,9 @@
 #include "point_sampling.h"
 
+std::unique_ptr<point_sampling> point_sampling::clone () const {
+  return std::unique_ptr<point_sampling>(clone_impl());
+}
+
 /** @param direction The direction vector of the rays in the bundle.
  *
  *  The z component of the ray position is set to zero.

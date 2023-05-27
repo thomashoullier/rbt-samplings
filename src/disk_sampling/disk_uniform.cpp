@@ -9,6 +9,10 @@ disk_uniform::disk_uniform (unsigned int n) {
   fill();
 }
 
+disk_uniform* disk_uniform::clone_impl() const {
+  return new disk_uniform(*this);
+}
+
 void disk_uniform::fill () {
   grid_square gs(n);
   this->fill_from_square_map(gs);
